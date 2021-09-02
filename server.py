@@ -8,6 +8,7 @@ class MainHandler(tornado.web.RequestHandler):
         self.set_header("Access-Control-Allow-Headers", "x-requested-with")
         self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
         self.set_header('Content-Type', 'application/json')
+#         self.set_header('Content-Security-Policy', "default-src 'self'")
         self.write(json_encode({'name': 'TornadoServer','version': 10,'false': True}))
 
 def make_app():
